@@ -1,0 +1,53 @@
+/*  */
+@keyframes temperature {
+    100% {
+        stroke-dashoffset: 262;
+        }
+}
+
+@keyframes pressure {
+    100% {
+        stroke-dashoffset: 37;
+        }
+}
+
+@keyframes humidity {
+    100% {
+        stroke-dashoffset: 225;
+        }
+}
+
+@keyframes soilmoisture {
+    100% {
+        stroke-dashoffset: 75;
+        }
+}
+
+ /* Valve1 */
+ .toggle.active{
+    background-color: rgb(110, 110, 223);
+}
+.toggle.active .toggle_btn{
+   margin-left: 24px;
+}
+/* Valve2 */
+.toggle2.active{
+    background-color: rgb(110, 110, 223);
+}
+.toggle2.active .toggle2_btn{
+   margin-left: 24px;
+}
+/* Valve3 */
+.toggle3.active{
+    background-color: rgb(110, 110, 223);
+}
+.toggle3.active .toggle3_btn{
+   margin-left: 24px;
+}
+/* Valve4 */
+.toggle4.active{
+    background-color: rgb(110, 110, 223);
+}
+.toggle4.active .toggle4_btn{
+   margin-left: 24px;
+}
