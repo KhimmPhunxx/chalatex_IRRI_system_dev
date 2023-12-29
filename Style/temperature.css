@@ -51,3 +51,7 @@
 .toggle4.active .toggle4_btn{
    margin-left: 24px;
 }
+
+.leftMenu.active{
+    margin-left: 0px;
+}

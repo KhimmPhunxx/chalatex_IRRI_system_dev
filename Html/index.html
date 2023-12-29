@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRRI-System Dev</title>
+    <link rel="stylesheet" href="./../Style/loading.css">
     <link rel="stylesheet" href="./../Style/temperature.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,87 +16,96 @@
     <body class="relative">
     <header>
         <nav class="w-full flex">
-            <div class="w-[20%] h-screen bg-blue-950">
-                <div class="w-full h-[105px] border-b-2 border-gray-100">
+            <div class="leftMenu z-40 w-[250px] lg:w-[20%] duration-300 h-screen bg-blue-950 absolute lg:relative ml-[-300px] lg:ml-0">
+                <div class="w-full h-[105px]">
                     <div class=" flex ml-3">
-                        <div class="w-16 h-16 m-3">
+                        <div class="h-10 w-10 lg:w-16 lg:h-16 m-3">
                             <img src="./../img/User02.png" class="w-[100%] h-[100%] shadow mt-3 rounded-full object-cover cursor-pointer" alt="">
                         </div>
                         <div class="name mt-8 cursor-pointer" style="font-family: 'Freehand', cursive;">
-                            <h1 class="text-lg text-gray-100 font-semibold">សួរស្តី, សុខដានាថ</h1>
-                            <p class="text-sm mt-1 font-medium text-gray-400">២៧​ ធ្នូ ២០២៣ </p>
+                            <h1 class="text-sm lg:text-lg text-gray-100 font-semibold">សួរស្តី, សុខដានាថ</h1>
+                            <p class="text-xs lg:text-sm mt-1 font-medium text-gray-400">២៧​ ធ្នូ ២០២៣ </p>
                         </div>
                     </div>
+                    <div class="border-b-2 border-gray-300 mt-4 w-[85%] mx-auto">
+
+                    </div>
                 </div>
-                <div class="w-[50%] h-48 mx-auto mt-10">
+                <div class="w-[50%] lg:h-48 mx-auto mt-3 lg:mt-10">
                     <div class="text-center space-y-2" style="font-family: 'Bayon', sans-serif;">
-                        <div class="bg-blue-900 p-3 rounded-full hover:duration-300 text-gray-200">
-                            <i class="fa-solid fa-house-signal text-xl"></i>
-                            <a href="" class="uppercase font-medium text-xl px-4 rounded-full py-1">ទំព័រដើម</a>
+                        <div class="bg-blue-900 lg:p-3 p-1 rounded-full hover:duration-300 text-gray-200">
+                            <i class="fa-solid fa-house-signal text-sm lg:text-xl"></i>
+                            <a href="" class="uppercase font-medium text-sm lg:text-xl lg:px-4 rounded-full lg:py-1">ទំព័រដើម</a>
                         </div>
-                        <div  class="hover:bg-blue-900 p-3 rounded-full hover:duration-300 text-gray-400  hover:text-gray-200">
-                            <i class="fa-solid fa-calendar-days text-xl"></i>
-                            <a href="./schedule.html" class="uppercase font-medium text-xl px-4 rounded-full py-1"> កាលវិភាគ
+                        <div  class="hover:bg-blue-900 lg:p-3 p-1 rounded-full hover:duration-300 text-gray-400  hover:text-gray-200">
+                            <i class="fa-solid fa-calendar-days text-sm lg:text-xl"></i>
+                            <a href="./schedule.html" class="uppercase font-medium text-sm lg:text-xl lg:px-4 rounded-full lg:py-1"> កាលវិភាគ
                             </a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="w-[78%] ml-[1%] h-[105px] border-b-2 border-blue-900">
-               <div class="flex justify-between my-3">
-                    <div class="flex">
-                        <div class="logo h-20 w-20">
-                            <img src="./../img/logo/IRRI_logo.jpg" class="w-full h-full border object-cover rounded-md shadow-md" alt="">
-                        </div>
-                        <h1 class="text-2xl font-bold text-blue-900 ml-3 mt-5" style="font-family: 'Manrope', sans-serif;">CAM-Sience</h1>
-                    </div>
-                    <div class="flex">
-                        <div class="search_btn" style="font-family: 'Hanuman', serif;">
-                            <input type="text" class="bg-blue-900  rounded-full text-sm text-white h-12 w-72 mt-4" placeholder="ស្វែងរក...">
-                           <button> <i class="fa-solid fa-magnifying-glass bg-blue-900 p-4 hover:bg-blue-800 hover:duration-300 rounded-full text-white"></i></button>
-                        </div>
-                        <a href="./loginIRRI.html">
-                            <button class="h-12 ml-5 w-20 bg-blue-900 mt-4 text-md text-white rounded-md" style="font-family: 'Manrope', sans-serif;">Login</button>
+                    <div  class="lg:hidden bg-blue-900 p-3 p-1 text-center rounded-md hover:duration-300 text-gray-200 mt-[500px]">
+                        <a href="./loginIRRI.html" class="uppercase font-medium text-sm lg:text-xl lg:px-4 rounded-full lg:py-1"> Login
                         </a>
                     </div>
+                </div>
+            </div>
+            <div class= "w-full lg:w-[78%] ml-[1%] h-[70px] lg:h-[105px] border-b-2 border-blue-900 p-1">
+               <div class="flex justify-between my-2 lg:my-3 sticky">
+                    <div class="flex">
+                        <div class="logo h-12 w-12 lg:h-20 lg:w-20">
+                            <img src="./../img/logo/IRRI_logo.jpg" class="w-full h-full border object-cover rounded-md shadow-md" alt="">
+                        </div>
+                        <h1 class="text-sm lg:text-2xl font-bold text-blue-900 mt-3 ml-2 lg:ml-3 lg:t-5" style="font-family: 'Manrope', sans-serif;">CAM-Sience</h1>
+                    </div>
+                    <div class="flex">
+                        <div class="search_btn  hidden lg:block" style="font-family: 'Hanuman', serif;">
+                            <input type="text" class="bg-blue-900  rounded-full text-sm text-white w-44 h-10 lg:h-12 lg:w-72 lg:mt-4" placeholder="ស្វែងរក...">
+                           <button class="absolute ml-[-40px] lg:ml-0 lg:relative"> <i class="fa-solid fa-magnifying-glass bg-blue-900 p-3 lg:p-4 hover:bg-blue-800 hover:duration-300 rounded-full text-white"></i></button>
+                        </div>
+                        <a href="./loginIRRI.html">
+                            <button class="hidden lg:block h-12 ml-5 w-20 bg-blue-900 lg:mt-4 text-md text-white rounded-md" style="font-family: 'Manrope', sans-serif;">Login</button>
+                        </a>
+                        <button id="menubar" onclick="sshowLeftMenu()" class="block lg:hidden border p-3 lg:mt-4 text-md text-white rounded-md" style="font-family: 'Manrope', sans-serif;"><i class="fa-solid fa-bars text-gray-500"></i> </button>
+                       
+                    </div>
                </div>
-               <main class="mt-6">
-                <h1 class="text-xl text-blue-900" style="font-family: 'Bayon', sans-serif;">ផ្ទាំងបង្ហាញទិន្នន័យ</h1>
-                    <div class="flex justify-between">
-                        <section class="w-[65%] h-[570px] bg-white shadow border rounded-xl ml-30 mt-2 p-3"> 
-                            <div class="w-full h-[70%] shadow shadow-md border rounded-t-lg px-3">
-                                <div class="w-full h-12 border-b-2 border-blue-900">
-                                    <div class="title py-2 flex"  style="font-family: 'Bayon', sans-serif;">
-                                        <h1 class="bg-gray-300 w-28 ml-4 text-blue-950 text-center px-3 py-1 rounded-full">សីតុណ្ហភាព</h1>
-                                        <h1 class="bg-gray-300 w-28 ml-[76px] text-blue-950 text-center px-3 py-1 rounded-full">សម្ពាធខ្យល់</h1>
-                                        <h1 class="bg-gray-300 w-28 ml-[76px] text-blue-950 text-center px-3 py-1 rounded-full">សំណើម</h1>
-                                        <h1 class="bg-gray-300 w-28 ml-[77px] text-blue-950 text-center px-3 py-1 rounded-full">សំណើមដី</h1>
+               <main class="mt-4 lg:mt-6">
+                <h1 class="text-sm lg:text-xl text-blue-900" style="font-family: 'Bayon', sans-serif;">ផ្ទាំងបង្ហាញទិន្នន័យ</h1>
+                    <div class="lg:flex justify-between">
+                        <section class="w-full lg:w-[65%] lg:h-[570px] bg-white shadow border rounded-xl ml-30 mt-2 p-3"> 
+                            <div class="w-full h-[330px] lg:h-[70%] shadow shadow-md border rounded-t-lg px-3">
+                                <div class="w-full h-12 border-b-2 border-blue-900 hidden lg:block">
+                                    <div class="title py-2 lg:flex"  style="font-family: 'Bayon', sans-serif;">
+                                        <h1 class="bg-gray-300 lg:w-28 lg:ml-4 text-blue-950 text-center lg:px-3 lg:py-1 rounded-full">សីតុណ្ហភាព</h1>
+                                        <h1 class="bg-gray-300 w-28 lg:ml-[76px] text-blue-950 text-center px-3 py-1 rounded-full">សម្ពាធខ្យល់</h1>
+                                        <h1 class="bg-gray-300 w-28 lg:ml-[76px] text-blue-950 text-center px-3 py-1 rounded-full">សំណើម</h1>
+                                        <h1 class="bg-gray-300 w-28 lg:ml-[77px] text-blue-950 text-center px-3 py-1 rounded-full">សំណើមដី</h1>
                                     </div>
                                 </div>
-                                <div class="w-full h-[170px] border-b-2 border-blue-900">
-                                    <div class="box flex justify-between">
-                                        <div class="temperat h-[160px] mt-4 w-[160px] ">
+                                <div class="w-full h-[170px] border-b-2 border-blue-900 hidden lg:block">
+                                    <div class="box flex flex-wrap justify-between">
+                                        <div class="temperat h-[160px] mt-4 w-[160px]">
                                             <section>
-                                                <div class="skill w-[140px] h-[140px] rounded-full relative">
-                                                    <div class="w-full h-full rounded-full p-[20px]" style="box-shadow: 6px 6px 10px 5px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);">
-                                                        <div class="inmer w-[100px] h-[100px] rounded-full flex justify-center items-center"
+                                                <div class="skill w-[100px] h-[100px] lg:w-[140px] lg:h-[140px] rounded-full relative">
+                                                    <div class="w-full h-full rounded-full p-[10px] lg:p-[20px]" style="box-shadow: 6px 6px 10px 5px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);">
+                                                        <div class="inmer w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] rounded-full flex justify-center items-center"
                                                         style="box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2), inset -4px -4px 6px -1px rgba(255,255,255,0.7), -0.5px -0.5px 0px rgba(255,255,255,1), 0.5px 0.5px 0px rgba(0,0,0,0.15), 0px 12px 10px -10px rgba(0,0,0,0.05) ;"
                                                         >
-                                                        <p class="text-4xl font-bold text-blue-700"
+                                                        <p class="lg:text-4xl text-2xl font-bold text-blue-700"
                                                             style="font-family: 'Manrope', sans-serif;" id="temp"></p>
                                         
-                                                        <svg class="mx-auto absolute top-0 left-0" xmlns="http://www.w3.org/2000/svg" version="1.1" width="140px" height="140px">
+                                                        <svg class="mx-auto absolute top-0 left-0  lg:w-[140px] lg:h-[140px]" xmlns="http://www.w3.org/2000/svg" version="1.1">
                                                             <defs>
                                                                 <linearGradient id="GradientColor">
                                                                     <stop offset="0%" stop-color="#e91e63" />
                                                                     <stop offset="100%" stop-color="#673ab7" />
                                                                 </linearGradient>
                                                             </defs>
-                                                            <circle class="fill-none stroke-[url(#GradientColor)] stroke-[20px]"
+                                                            <circle class="fill-none stroke-[url(#GradientColor)] stroke-[10px] lg:stroke-[20px] h-[50px] w-[50px] absolute"
                                                                     cx="70" cy="70" r="60"
                                                                     stroke-linecap="round" 
                                                                     style="stroke-dasharray: 375; stroke-dashoffset: 375 ; animation: temperature 2s linear forwards;"
-                                                                    />
+                                                            />
                                                         </svg>
                                                         </div>
                                                     </div>
@@ -122,8 +132,8 @@
                                                             <circle class="fill-none stroke-[url(#GradientColor)] stroke-[20px]"
                                                                     cx="70" cy="70" r="60"
                                                                     stroke-linecap="round" 
-                                                                    style="stroke-dasharray: 375; stroke-dashoffset: 375; animation: pressure 4.5s linear forwards;"
-                                                                    />
+                                                                    style="stroke-dasharray: 375; stroke-dashoffset: 375; animation: pressure 10s linear forwards;"
+                                                                />
                                                         </svg>
                                                         </div>
                                                     </div>
@@ -188,23 +198,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="h-[150px] w-full py-2 flex" style="font-family: 'Hanuman', serif;">
-                                    <div class="timeandplace w-[30%] h-full space-y-4">
-                                        <h1 class="text-7xl font-bold text-blue-950" style="font-family: 'Manrope', sans-serif;">10:40</h1>
-                                       <div class="place">
+                                <div class="lg:h-[150px] w-full lg:py-2 lg:flex " style="font-family: 'Hanuman', serif;">
+                                    <div class="timeandplace w-full lg:w-[30%] h-full lg:space-y-4 flex lg:block">
+                                        <h1 class="text-5xl lg:text-7xl font-bold text-blue-950 mt-3 lg:mt-0" style="font-family: 'Manrope', sans-serif;">10:40</h1>
+                                       <div class="place ml-5 lg:ml-0 mt-2 lg:mt-0">
                                             <h1 class="font-bold text-md text-gray-700">ភ្នំពេញ ប្រទេសកម្ពុជា</h1>
                                             <h1 class="font-medium text-gray-600 text-sm">ថ្ងៃព្រហស្បតិ៍ ទី២៨ ខែធ្នូ ឆ្នាំ២០២៣</h1>
                                        </div>
                                     </div>
-                                    <div class="h-full w-[70%] flex">        
-                                        <div class="w-[25%] h-full space-y-2">
+                                    <div class="h-full w-full lg:w-[70%] lg:flex mt-5 lg:mt-0">        
+                                        <div class="w-full lg:w-[25%] h-full lg:space-y-2 flex lg:block  lg:px-0">
                                             <div>
-                                                <h1 class="text-2xl text-blue-950 font-bold" style="font-family: 'Manrope', sans-serif;">
+                                                <h1 class="text-4xl lg:text-2xl  text-blue-950 font-bold" style="font-family: 'Manrope', sans-serif;">
                                                     30°C
                                                 </h1>
                                                 <h1 class="text-sm font-bold text-gray-600 "> មានអារម្មណ៍ថា 29°C</h1>
                                             </div>
-                                            <div class="space-y-1">
+                                            <div class="space-y-1 ml-8 lg:ml-0">
                                                 <div class="flex">
                                                     <div>
                                                         <h1 class="font-bold text-sm">ព្រះអាទិត្យរះ</h1>
@@ -226,92 +236,92 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="w-[75%] h-full flex justify-between">
+                                        <div class="w-full lg:w-[75%] h-full flex justify-between lg:ml-0 mt-5 lg:mt-0">
                                             <!-- presure and humidity -->
-                                           <div class="h-full w-[30%] space-y-8">
+                                           <div class="h-full w-[30%] space-y-4 lg:space-y-8 lg:ml-0">
                                                <div class="flex justify-center space-x-2">
                                                     <div>
                                                         <h1 class="text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">40%</h1>
                                                         <h1 class="text-center font-semibold">សំណើម</h1>
                                                     </div>
-                                                    <div class="h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/humidity.png" alt=""></div>
+                                                    <div class="hidden lg:block h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/humidity.png" alt=""></div>
                                                </div>
                                                <div class="flex justify-center space-x-1">
                                                 <div>
-                                                    <h1 class="text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">456hpa</h1>
+                                                    <h1 class="text-sm lg:text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">456hpa</h1>
                                                     <h1 class="text-center font-semibold">សម្ពាធខ្យល់</h1>
                                                 </div>
-                                                <div class="h-10 w-10 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/pressure.png" alt=""></div>
+                                                <div class="hidden lg:block h-10 w-10 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/pressure.png" alt=""></div>
                                            </div>
                                           
                                               
                                            </div>
                                            <!-- #2 -->
-                                           <div class="h-full w-[30%] space-y-8">
+                                           <div class="h-full w-[50%] space-y-4 lg:space-y-8 lg:ml-0 ">
                                             <div class="flex justify-center space-x-2">
                                                  <div>
-                                                     <h1 class="text-md font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">50 km/h</h1>
-                                                     <h1 class="text-center font-semibold">ល្បឿនខ្យល់</h1>
+                                                     <h1 class="text-[14px] lg:text-md font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">50 km/h</h1>
+                                                     <h1 class="text-center text-sm font-semibold">ល្បឿនខ្យល់</h1>
                                                  </div>
-                                                 <div class="h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/wind_Speed.png" alt=""></div>
+                                                 <div class="hidden lg:block h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/wind_Speed.png" alt=""></div>
                                             </div>
                                             <div class="flex justify-center space-x-1">
                                              <div>
                                                  <h1 class="text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">12</h1>
                                                  <h1 class="text-center font-semibold">កាំរស្មីយូវី</h1>
                                              </div>
-                                             <div class="h-10 w-10 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/UV.png" alt=""></div>
+                                             <div class="hidden lg:block h-10 w-10 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/UV.png" alt=""></div>
                                             </div>
                                             </div>
                                             <!--#3  -->
-                                            <div class="h-full w-[30%] space-y-6 ">
+                                            <div class="h-full w-[30%] space-y-6 lg:ml-0">
                                                 <div class="flex justify-center space-x-2">
                                                      <div>
                                                          <h1 class="text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">80%</h1>
                                                          <h1 class="text-center font-semibold">សំណើមដី</h1>
                                                      </div>
-                                                     <div class="h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/Soil.png" alt=""></div>
+                                                     <div class="hidden lg:block h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/Soil.png" alt=""></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full h-[25%] mt-[2%] flex justify-between">
-                                <div class="h-full w-[30%] shadow rounded-xl flex p-3 bg-gradient-to-r from-purple-500 to-pink-500">
+                            <div class="w-full h-[25%] mt-3 lg:mt-[2%] flex justify-between">
+                                <div class="h-full w-[30%] shadow rounded-xl lg:flex  px-1 lg:px-0 p-3 bg-gradient-to-r from-purple-500 to-pink-500">
                                     <div class="number" style="font-family: 'Manrope', sans-serif;">
-                                        <h1 class="font-bold text-4xl text-white">12:00</h1>
+                                        <h1 class="font-bold text-2xl lg:text-4xl text-white">12:00</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">26°C</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">3km/h</h1>
                                     </div>
-                                   <div class="img h-24 w-24 mt-2 ml-2">
+                                   <div class="img h-24 w-24 mt-2 lg:ml-2">
                                         <img src="./../img/ImgTemp/clear.png" alt="">
                                    </div>
                                 </div>
-                                <div class="h-full w-[30%] shadow rounded-xl flex p-3 bg-gradient-to-r from-orange-400 to-orange-700">
+                                <div class="h-full w-[30%] shadow rounded-xl lg:flex  px-1 lg:px-0 p-3 bg-gradient-to-r from-orange-400 to-orange-700">
                                     <div class="number" style="font-family: 'Manrope', sans-serif;">
-                                        <h1 class="font-bold text-4xl text-white">15:00</h1>
+                                        <h1 class="font-bold text-2xl lg:text-4xl text-white">15:00</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">27°C</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">2km/h</h1>
                                     </div>
-                                   <div class="img h-24 w-24 mt-2 ml-2">
+                                   <div class="img h-24 w-24 mt-2 lg:ml-2">
                                         <img src="./../img/ImgTemp/clear.png" alt="">
                                    </div>
                                 </div>
-                                <div class="h-full w-[30%] shadow rounded-xl flex p-3 bg-gradient-to-r from-teal-600 to-teal-400">
+                                <div class="h-full w-[30%] shadow rounded-xl lg:flex px-1 lg:px-0 p-3 bg-gradient-to-r from-teal-600 to-teal-400">
                                     <div class="number" style="font-family: 'Manrope', sans-serif;">
-                                        <h1 class="font-bold text-4xl text-white">18:00</h1>
+                                        <h1 class="font-bold text-2xl lg:text-4xl text-white">18:00</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">27°C</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">2km/h</h1>
                                     </div>
-                                   <div class="img h-24 w-24 mt-2 ml-2">
+                                   <div class="img h-24 w-24 mt-2 lg:ml-2">
                                         <img src="./../img/ImgTemp/clouds.png" alt="">
                                    </div>
                                 </div>
                             </div>
                            
                         </section>
-                        <section class="w-[33%] h-[570px] bg-white shadow border rounded-xl mt-2 p-3 px-7">
+                        <section class="w-full lg:w-[33%] h-[570px] bg-white shadow border rounded-xl mt-2 p-3 px-7 lg:px-9">
                             <h1 class="text-xl text-center text-blue-900" style="font-family: 'Bayon', sans-serif;">ប្រព័ន្ធគ្រប់​គ្រងទិន្នន័យ</h1>
                                 <div class="w-full h-40 mt-5 flex justify-between">
                                     <!-- Valve1 -->
@@ -398,9 +408,9 @@
                         </section>
                     </div>
                 </main>
-            </div
-
+            </div>
         </nav>
+        <div class="loader"></div>
     </header>
     
     <!-- JavaScript -->
@@ -426,7 +436,7 @@
                 counter1+=1;
                 press.innerHTML = counter1 + "hPa";
               }
-        }, 4); 
+        }, 5); 
         // humidity
         const hum = document.getElementById("hum");
         let counter2 = 0;
@@ -502,10 +512,24 @@
                 text4.innerHTML = "បិទ";
             }
         }
+        // show left menu
+        const menubar = document.getElementById("menubar");
+
+        function sshowLeftMenu(){
+            const leftMenu = document.querySelector(".leftMenu");
+            leftMenu.classList.toggle("active");
+            if(leftMenu.classList.contains("active")){
+                menubar.innerHTML = '<i class="fa-solid fa-xmark text-gray-500"></i>';
+            }else{
+                menubar.innerHTML = '<i class="fa-solid fa-bars text-gray-500"></i>';
+            }
+        }
+
 
     </script>
     
 </body>
+    <script src="./../JavaScript/loading.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </html>
