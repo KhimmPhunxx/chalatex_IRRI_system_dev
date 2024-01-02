@@ -34,7 +34,7 @@
                                 <i class="fa-regular fa-envelope text-gray-400"></i><input type="email" class="items-center bg-white border-0  focus:ring-0 focua:border-b-2 focus:border-0 border-white text-black" placeholder=" អុីមែល​ ឬ លេខទូរស័ព្ទ">
                             </div>
                             <div class="border-b-2 w-80 mx-auto mt-8">
-                                <i class="fa-solid fa-unlock-keyhole text-gray-400"></i><input type="password" class="items-center  border-0  focus:ring-0 focua:border-b-2 focus:border-0 border-white text-black" placeholder=" ពាក្យសម្ងាត់"> <i class="fa-solid fa-eye-slash ml-12 text-xl text-gray-300 cursor-pointer hover:duration-300 hover:text-gray-600"></i>
+                                <i class="fa-solid fa-unlock-keyhole text-gray-400"></i><input type="password" class="items-center  border-0  focus:ring-0 focua:border-b-2 focus:border-0 border-white text-black" placeholder=" ពាក្យសម្ងាត់" id="password"> <i id="hidepss" class="fa-solid fa-eye-slash ml-12 text-xl text-gray-300 cursor-pointer hover:duration-300 hover:text-gray-600"></i>
                             </div>
                             <div class="w-80 mx-auto mt-5">
                                 <a href="./index.html" type="submit" class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg bg-blue-600  hover:bg-blue-900 hover:duration-300 focus:ring-4 focus:outline-none focus:ring-primary-300 "> ចុះ​ឈ្មោះ</a>
@@ -54,6 +54,19 @@
     
     <!-- JavaScript -->
     <script>
+        const hidepss = document.getElementById('hidepss');
+        const password = document.getElementById('password');
+        hidepss.addEventListener('click', function(){
+            if(password.type === 'password'){
+                password.type = 'text';
+                hidepss.classList.remove('fa-eye-slash');
+                hidepss.classList.add('fa-eye');
+            }else{
+                password.type = 'password';
+                hidepss.classList.remove('fa-eye');
+                hidepss.classList.add('fa-eye-slash');
+            }
+        })
     </script>
     
 </body>

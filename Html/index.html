@@ -199,20 +199,24 @@
                                     </div>
                                 </div>
                                 <div class="lg:h-[150px] w-full lg:py-2 lg:flex " style="font-family: 'Hanuman', serif;">
-                                    <div class="timeandplace w-full lg:w-[30%] h-full lg:space-y-4 flex lg:block">
-                                        <h1 class="text-5xl lg:text-7xl font-bold text-blue-950 mt-3 lg:mt-0" style="font-family: 'Manrope', sans-serif;">10:40</h1>
+                                    <div class="timeandplace w-full lg:w-[30%] h-full lg:space-y-4 flex justify-between lg:block">
+                                        <h1 class="flex text-5xl w-[83%] lg:text-5xl font-bold text-blue-950 mt-3 lg:mt-0" style="font-family: 'Manrope', sans-serif;">
+                                            <p id="hour">0</p>:
+                                            <p id="minut">0</p>:
+                                            <p id="second">0</p>
+                                        </h1>
                                        <div class="place ml-5 lg:ml-0 mt-2 lg:mt-0">
                                             <h1 class="font-bold text-md text-gray-700">ភ្នំពេញ ប្រទេសកម្ពុជា</h1>
-                                            <h1 class="font-medium text-gray-600 text-sm">ថ្ងៃព្រហស្បតិ៍ ទី២៨ ខែធ្នូ ឆ្នាំ២០២៣</h1>
+                                            <h1 id="calender" class="font-medium text-gray-600 text-sm">ថ្ងៃព្រហស្បតិ៍ ទី២៨ ខែធ្នូ ឆ្នាំ២០២៣</h1>
                                        </div>
                                     </div>
                                     <div class="h-full w-full lg:w-[70%] lg:flex mt-5 lg:mt-0">        
                                         <div class="w-full lg:w-[25%] h-full lg:space-y-2 flex lg:block  lg:px-0">
                                             <div>
-                                                <h1 class="text-4xl lg:text-2xl  text-blue-950 font-bold" style="font-family: 'Manrope', sans-serif;">
+                                                <h1 id="temp2" class="text-4xl lg:text-2xl  text-blue-950 font-bold" style="font-family: 'Manrope', sans-serif;">
                                                     30°C
                                                 </h1>
-                                                <h1 class="text-sm font-bold text-gray-600 "> មានអារម្មណ៍ថា 29°C</h1>
+                                                <h1 class="text-sm font-bold text-gray-600 flex">មានអារម្មណ៍ថា <p id="fellike" class="ml-1"></p></h1>
                                             </div>
                                             <div class="space-y-1 ml-8 lg:ml-0">
                                                 <div class="flex">
@@ -241,14 +245,14 @@
                                            <div class="h-full w-[30%] space-y-4 lg:space-y-8 lg:ml-0">
                                                <div class="flex justify-center space-x-2">
                                                     <div>
-                                                        <h1 class="text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">40%</h1>
+                                                        <h1 id="hum2" class="text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;"></h1>
                                                         <h1 class="text-center font-semibold">សំណើម</h1>
                                                     </div>
                                                     <div class="hidden lg:block h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/humidity.png" alt=""></div>
                                                </div>
                                                <div class="flex justify-center space-x-1">
                                                 <div>
-                                                    <h1 class="text-sm lg:text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">456hpa</h1>
+                                                    <h1 id="press2" class="text-sm lg:text-xl font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">456hpa</h1>
                                                     <h1 class="text-center font-semibold">សម្ពាធខ្យល់</h1>
                                                 </div>
                                                 <div class="hidden lg:block h-10 w-10 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/pressure.png" alt=""></div>
@@ -260,7 +264,7 @@
                                            <div class="h-full w-[50%] space-y-4 lg:space-y-8 lg:ml-0 ">
                                             <div class="flex justify-center space-x-2">
                                                  <div>
-                                                     <h1 class="text-[14px] lg:text-md font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">50 km/h</h1>
+                                                     <h1 id="windspeed" class="text-[14px] lg:text-md font-bold text-blue-900 text-center" style="font-family: 'Manrope', sans-serif;">50 km/h</h1>
                                                      <h1 class="text-center text-sm font-semibold">ល្បឿនខ្យល់</h1>
                                                  </div>
                                                  <div class="hidden lg:block h-9 w-9 mt-1"><img class="w-full h-full object-cover" src="./../Icons/temperatur/wind_Speed.png" alt=""></div>
@@ -288,7 +292,7 @@
                                 </div>
                             </div>
                             <div class="w-full h-[25%] mt-3 lg:mt-[2%] flex justify-between">
-                                <div class="h-full w-[30%] shadow rounded-xl lg:flex  px-1 lg:px-0 p-3 bg-gradient-to-r from-purple-500 to-pink-500">
+                                <div class="h-full w-[30%] shadow rounded-xl lg:flex  px-1  p-3 bg-gradient-to-r from-purple-500 to-pink-500">
                                     <div class="number" style="font-family: 'Manrope', sans-serif;">
                                         <h1 class="font-bold text-2xl lg:text-4xl text-white">12:00</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">26°C</h1>
@@ -298,7 +302,7 @@
                                         <img src="./../img/ImgTemp/clear.png" alt="">
                                    </div>
                                 </div>
-                                <div class="h-full w-[30%] shadow rounded-xl lg:flex  px-1 lg:px-0 p-3 bg-gradient-to-r from-orange-400 to-orange-700">
+                                <div class="h-full w-[30%] shadow rounded-xl lg:flex  px-1 p-3 bg-gradient-to-r from-orange-400 to-orange-700">
                                     <div class="number" style="font-family: 'Manrope', sans-serif;">
                                         <h1 class="font-bold text-2xl lg:text-4xl text-white">15:00</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">27°C</h1>
@@ -308,7 +312,7 @@
                                         <img src="./../img/ImgTemp/clear.png" alt="">
                                    </div>
                                 </div>
-                                <div class="h-full w-[30%] shadow rounded-xl lg:flex px-1 lg:px-0 p-3 bg-gradient-to-r from-teal-600 to-teal-400">
+                                <div class="h-full w-[30%] shadow rounded-xl lg:flex px-1 p-3 bg-gradient-to-r from-teal-600 to-teal-400">
                                     <div class="number" style="font-family: 'Manrope', sans-serif;">
                                         <h1 class="font-bold text-2xl lg:text-4xl text-white">18:00</h1>
                                         <h1 class="text-2xl text-gray-300 font-semibold">27°C</h1>
@@ -321,11 +325,11 @@
                             </div>
                            
                         </section>
-                        <section class="w-full lg:w-[33%] h-[570px] bg-white shadow border rounded-xl mt-2 p-3 px-7 lg:px-9">
+                        <section class="w-full lg:w-[33%] h-[570px] bg-white shadow border rounded-xl mt-2 p-3 px-5 lg:px-6">
                             <h1 class="text-xl text-center text-blue-900" style="font-family: 'Bayon', sans-serif;">ប្រព័ន្ធគ្រប់​គ្រងទិន្នន័យ</h1>
                                 <div class="w-full h-40 mt-5 flex justify-between">
                                     <!-- Valve1 -->
-                                    <div class="w-40 h-40 border rounded-lg shadow p-3">
+                                    <div class="valve1 w-40 h-40 border rounded-lg shadow p-3">
                                         <div class="h-[40%] w-12 mx-auto">
                                             <img class="w-full h-full object-cover" src="./../img/valve/valve.png" alt="">
                                         </div>
@@ -415,39 +419,61 @@
     
     <!-- JavaScript -->
     <script>
-        // temperature
-        const temp = document.getElementById("temp");
-        let counter = 0;
-        setInterval(() => {
-           if(counter == 32){
-               clearInterval();
-              }else{
-                counter+=1;
-                temp.innerHTML = counter + "°C";
-              }
-        }, 55);  
-        // pressure
-        const press = document.getElementById("press");
-        let counter1 = 0;
-        setInterval(() => {
-           if(counter1 == 1021){
-               clearInterval();
-              }else{
-                counter1+=1;
-                press.innerHTML = counter1 + "hPa";
-              }
-        }, 5); 
-        // humidity
-        const hum = document.getElementById("hum");
-        let counter2 = 0;
-        setInterval(() => {
-           if(counter2 == 40){
-               clearInterval();
-              }else{
-                counter2+=1;
-                hum.innerHTML = counter2 + "%";
-              }
-        }, 43); 
+
+        const apiKey ="6831e7a7e0e04dac6c38e798128a8891" ;
+        const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=cambodia";
+
+        async function checkWeather(){
+            const response = await fetch(apiUrl + `&appid=${apiKey}`);
+            const data = await response.json();
+            console.log(data);
+
+            document.getElementById("temp").innerHTML = Math.round(data.main.temp) + "°C";
+            document.getElementById("press").innerHTML = data.main.pressure + "hPa";
+            document.getElementById("hum").innerHTML = data.main.humidity + "%";
+            document.getElementById("fellike").innerHTML = Math.round(data.main.feels_like) + "°C";
+            document.getElementById("hum2").innerHTML = data.main.humidity + "%";
+            document.getElementById("press2").innerHTML = data.main.pressure + "hPa";
+            document.getElementById("windspeed").innerHTML = data.wind.speed + "km/h";
+            document.getElementById("temp2").innerHTML = Math.round(data.main.temp) + "°C";
+
+
+        }
+        checkWeather();
+
+        //temperature
+        // const temp = document.getElementById("temp");
+        // let counter = 0;
+        // setInterval(() => {
+        //    if(counter == Math.round(data.main.temp)){
+        //        clearInterval();
+        //       }else{
+        //         counter+=1;
+        //         temp.innerHTML = counter + "°C";
+        //       }
+        // }, 55);  
+        // // pressure
+        // const press = document.getElementById("press");
+        // let counter1 = 0;
+        // setInterval(() => {
+        //    if(counter1 == 1021){
+        //        clearInterval();
+        //       }else{
+        //         counter1+=1;
+        //         press.innerHTML = counter1 + "hPa";
+        //       }
+        // }, 5); 
+        // // humidity
+        // const hum = document.getElementById("hum");
+        // let counter2 = 0;
+        // setInterval(() => {
+        //    if(counter2 == 40){
+        //        clearInterval();
+        //       }else{
+        //         counter2+=1;
+        //         hum.innerHTML = counter2 + "%";
+        //       }
+        // }, 43); 
         // soil moisture
         const soil = document.getElementById("soil");
         let counter3 = 0;
@@ -524,6 +550,25 @@
                 menubar.innerHTML = '<i class="fa-solid fa-bars text-gray-500"></i>';
             }
         }
+        // time
+        const hour = document.getElementById("hour");
+        const minut = document.getElementById("minut");
+        const second = document.getElementById("second");
+
+        setInterval(() => {
+            let date = new Date();
+            let hh = date.getHours();
+            let mm = date.getMinutes();
+            let ss = date.getSeconds();
+            
+            hour.innerHTML = hh;
+            minut.innerHTML = mm;
+            second.innerHTML = ss;
+
+        }, 1000);
+
+       
+
 
 
     </script>
